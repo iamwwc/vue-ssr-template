@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
     asyncData({ store, route:{path}}){
         store.state.url = path
@@ -14,6 +15,9 @@ export default {
             id: 0,
             url: this.$store.state.url
         }
+    },
+    computed:{
+        ...mapState(['url'])
     },
     created () {
         var a 

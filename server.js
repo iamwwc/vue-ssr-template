@@ -13,6 +13,7 @@ function createRenderer(bundle, options) {
     }))
 }
 
+
 let renderer
 let readyPromise
 const templatePath = resolve('./index.template.html')

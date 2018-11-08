@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import { createApp } from './app'
 
-
 Vue.mixin({
     beforeRouteUpdate (to, from , next) {
         const { asyncData } = this.$options

@@ -8,6 +8,7 @@ module.exports = merge(base, {
   target: 'node',
   devtool: '#source-map',
   entry: './src/entry-server.js',
+  mode: process.env.NODE_ENV === 'production' ? 'production':'development',
   output: {
     filename: 'server-bundle.js',
     libraryTarget: 'commonjs2'
@@ -25,7 +26,6 @@ module.exports = merge(base, {
   }),
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       'process.env.VUE_ENV': '"server"'
     }),
     new VueSSRServerPlugin()
