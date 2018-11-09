@@ -14,9 +14,6 @@ module.exports = merge(base, {
     libraryTarget: 'commonjs2'
   },
   resolve: {
-    alias: {
-      'create-api': './create-api-server.js'
-    }
   },
   // https://webpack.js.org/configuration/externals/#externals
   // https://github.com/liady/webpack-node-externals
